@@ -1,7 +1,7 @@
 import re
 
 def how_strong_pas(password):
-    validation = r'^(?=.*[а-я])(?=.*[А-Я])(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[@$!%*#?&])[А-Яа-яA-Za-z\d@$!%*#?&]{8,}'
+    validation = r'^(?=.*[а-я]|.*[a-z])(?=.*[A-Z]|.*[А-Я])(?=([А-Яа-яA-Za-z\d@$!%*#?&]{8,}))'
     if re.match(validation, password):
         return True
     else:
